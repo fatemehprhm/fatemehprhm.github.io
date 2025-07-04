@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fatemeh Pourhashem | Robotics Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="overflow-x-hidden">
+    <canvas id="hero-canvas"></canvas>
+    <main class="container mx-auto px-6 md:px-12 py-20 space-y-24">
+        <section id="home" class="flex items-center page-section active">
+            <div class="container mx-auto px-6 py-12 grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-center md:text-left">
+                    <h1 class="text-5xl md:text-6xl font-bold text-white leading-tight">Fatemeh Pourhashem</h1>
+                    <p class="text-xl md:text-2xl text-indigo-300 mt-4 font-light">Robotics Software Engineer</p>
+                    <p class="max-w-xl mx-auto md:mx-0 mt-6 text-gray-300">
+                        Expertise in autonomous navigation, control systems, computer vision, and AI, transforming ambitious technological visions into reality.
+                    </p>
+                    <div class="mt-8">
+                        <a href="pages/projects.html" class="bg-indigo-600 text-white font-semibold px-8 py-3 rounded-full hover:bg-indigo-700 transition duration-300">Explore My Work</a>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="w-80 h-80 rounded-full overflow-hidden border-4 border-indigo-500 shadow-2xl">
+                        <img src="images/fatemeh_pourhashem.jpeg" alt="A photo of Fatemeh Pourhashem" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- About Me Section -->
+        <section id="about" class="section">
+            <div class="md:col-span-3">
+                <h2 class="text-3xl font-bold text-white text-center mb-4">About Me</h2>
+                <p class="mb-4">
+                    I am an enthusiastic Robotics Software Engineer with a Master's degree in Aerospace Engineering, specializing in Flight Dynamics and Control. My passion lies at the intersection of robotics, AI, and software development, where I can build intelligent systems that solve real-world problems.
+                </p>
+                <p class="mb-6">
+                    From developing voice-controlled UAVs and autonomous vehicle monitoring systems to designing robots for agricultural automation, I thrive in challenging environments. I enjoy pushing boundaries, contributing to collaborative teams, and bringing complex technological concepts to life.
+                </p>
+                <div class="flex justify-center">
+                    <a href="pdfs/Fatemeh_Pourhashem_CV.pdf"
+                    class="bg-indigo-500 text-white font-semibold px-6 py-2 rounded-full hover:bg-indigo-600 transition duration-300"
+                    download>
+                        Download CV
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <h2 class="text-3xl font-bold text-white text-center mb-12">Technical Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Robotics -->
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold text-indigo-400 mb-4">Robotics</h3>
+                    <ul class="space-y-3">
+                        <li>ROS (ROS1, ROS2), Autoware</li>
+                        <li>SLAM (Hector, RTAB-Map, Visual-SLAM)</li>
+                        <li>Simulation (Gazebo, CARLA, Webots, ESMINI)</li>
+                        <li>Navigation (Navigation Stack, Nav2)</li>
+                        <li>Control Systems</li>
+                    </ul>
+                </div>
+                <!-- Programming -->
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold text-indigo-400 mb-4">Programming & Software</h3>
+                    <ul class="space-y-3">
+                        <li>C++ (Advanced)</li>
+                        <li>Python (Advanced)</li>
+                        <li>API Development</li>
+                        <li>Git & GitLab CI/CD</li>
+                        <li>Linux (Ubuntu)</li>
+                    </ul>
+                </div>
+                <!-- Machine Learning -->
+                <div class="bg-gray-800 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold text-indigo-400 mb-4">Machine Learning & CV</h3>
+                    <ul class="space-y-3">
+                        <li>Deep Learning (CNNs, RNNs)</li>
+                        <li>Object Detection (YOLO, SAHI)</li>
+                        <li>Segmentation (U-Net, EfficientNet)</li>
+                        <li>Libraries: TensorFlow, Keras, OpenCV</li>
+                        <li>Signal Processing & Noise Reduction</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <h2 class="text-3xl font-bold text-white text-center mb-12">Professional Experience</h2>
+            <div class="relative border-l-2 border-indigo-500 pl-10">
+                <!-- Argos -->
+                <div class="mb-12">
+                    <div class="absolute w-4 h-4 bg-indigo-500 rounded-full -left-2 mt-1.5"></div>
+                    <p class="text-sm text-indigo-300">Oct 2022 - June 2025</p>
+                    <h3 class="text-xl font-semibold text-white mt-1">Software Developer</h3>
+                    <p class="text-gray-400">Argos (Remote | Germany)</p>
+                    <p class="mt-2">Led a team in developing autonomous vehicle monitoring systems. Designed complex OpenSCENARIO simulations, developed C++/Python APIs and GUIs, and implemented signal processing for sensor data.</p>
+                </div>
+                <!-- Sadid Informatics -->
+                <div class="mb-12">
+                    <div class="absolute w-4 h-4 bg-indigo-500 rounded-full -left-2 mt-1.5"></div>
+                    <p class="text-sm text-indigo-300">Dec 2023 - Mar 2024</p>
+                    <h3 class="text-xl font-semibold text-white mt-1">Robotics Engineer</h3>
+                    <p class="text-gray-400">Sadid Informatics</p>
+                    <p class="mt-2">Engineered autonomous navigation for poultry farm robots using ROS/ROS2, SLAM, and sensor fusion with Kalman filters. Validated systems in Gazebo and real-world deployments.</p>
+                </div>
+                <!-- AI Medic -->
+                <div class="mb-12">
+                    <div class="absolute w-4 h-4 bg-indigo-500 rounded-full -left-2 mt-1.5"></div>
+                    <p class="text-sm text-indigo-300">Sep 2022 - Nov 2022</p>
+                    <h3 class="text-xl font-semibold text-white mt-1">Artificial Intelligence Engineer</h3>
+                    <p class="text-gray-400">AI medic | Internship</p>
+                    <p class="mt-2">Developed deep learning systems (EfficientNet, U-Net) for semantic segmentation of ocular lesions and built an OCR model for medical image analysis.</p>
+                </div>
+                <!-- Hamtech -->
+                <div class="mb-12">
+                    <div class="absolute w-4 h-4 bg-indigo-500 rounded-full -left-2 mt-1.5"></div>
+                    <p class="text-sm text-indigo-300">August 2022 - September 2022</p>
+                    <h3 class="text-xl font-semibold text-white mt-1">Computer Vision Engineer</h3>
+                    <p class="text-gray-400">Hamtech | Internship</p>
+                    <p class="mt-2">Developed a Telegram bot with web scraping for local waste data collection and implemented YOLO-based waste classification with anomaly detection to enhance accuracy in a recycling project.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/components.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

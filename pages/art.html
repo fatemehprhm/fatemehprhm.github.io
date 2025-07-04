@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fine Arts | Fatemeh Pourhashem</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="overflow-x-hidden">
+    <canvas id="hero-canvas"></canvas>
+
+    <main>
+        <!-- Fine Arts Page (Gallery) -->
+        <section id="art" class="page-section active">
+            <div class="container mx-auto px-6 py-20">
+                <h2 class="text-4xl font-bold text-white text-center mb-12">Fine Arts</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- You will need to create art-detail-1.html, etc. -->
+                    <a href="#art-detail-1" class="block bg-gray-800 rounded-lg overflow-hidden art-card">
+                        <img src="https://placehold.co/600x800/1f2937/d1d5db?text=Artwork+1" alt="Artwork 1" class="w-full h-96 object-cover">
+                        <div class="p-6"><h3 class="text-xl font-semibold text-white">Artwork Title One</h3><p class="mt-2 text-gray-400 text-sm">Medium: Oil on Canvas</p></div>
+                    </a>
+                    <a href="#art-detail-2" class="block bg-gray-800 rounded-lg overflow-hidden art-card">
+                        <img src="https://placehold.co/600x800/1f2937/d1d5db?text=Artwork+2" alt="Artwork 2" class="w-full h-96 object-cover">
+                        <div class="p-6"><h3 class="text-xl font-semibold text-white">Artwork Title Two</h3><p class="mt-2 text-gray-400 text-sm">Medium: Digital Painting</p></div>
+                    </a>
+                    <a href="#art-detail-3" class="block bg-gray-800 rounded-lg overflow-hidden art-card">
+                        <img src="https://placehold.co/600x800/1f2937/d1d5db?text=Artwork+3" alt="Artwork 3" class="w-full h-96 object-cover">
+                        <div class="p-6"><h3 class="text-xl font-semibold text-white">Artwork Title Three</h3><p class="mt-2 text-gray-400 text-sm">Medium: Charcoal Sketch</p></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../assets/js/config.js"></script>
+    <script src="../assets/js/components.js"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+# The poultry robot navigation
+
+This project involved the design, simulation, and deployment of an autonomous robot for real-world poultry farm monitoring. As a Robotics Engineer, I played a key role in integrating ROS Noetic's Navigation Stack and Hector SLAM for navigation using 2D LiDAR, IMU, and wheel odometry. In the second phase, I migrated the system to ROS 2 Humble and Nav2, utilizing the RTAB-Map algorithm with a RealSense 435i camera for robust visual mapping and localization.

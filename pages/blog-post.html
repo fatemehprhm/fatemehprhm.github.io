@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Post | Fatemeh Pourhashem</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Add the Marked.js library to render Markdown -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!-- Add styles for the rendered markdown -->
+    <style>
+        .prose h1, .prose h2, .prose h3 {
+            color: white;
+        }
+        .prose p, .prose li {
+            color: #d1d5db;
+        }
+        .prose a {
+            color: #818cf8;
+        }
+        .prose code {
+            color: #f472b6;
+        }
+        .prose blockquote {
+            border-left-color: #6366f1;
+            color: #a5b4fc;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+    <canvas id="hero-canvas"></canvas>
+
+    <main>
+        <section class="page-section active">
+            <div class="container mx-auto px-6 py-20">
+                <a href="blog.html" class="text-indigo-400 hover:text-indigo-300">&larr; Back to Blog</a>
+                <!-- The Markdown content will be loaded here -->
+                <div id="content" class="prose prose-lg mx-auto mt-8"></div>
+            </div>
+        </section>
+    </main>
+    
+    <script src="../assets/js/config.js"></script>
+    <script src="../assets/js/components.js"></script>
+    <script src="../assets/js/script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get the post name from the URL query parameter
+            const params = new URLSearchParams(window.location.search);
+            const postName = params.get('post');
+
+            if (postName) {
+                const contentDiv = document.getElementById('content');
+                const postPath = `../posts/${postName}.md`;
+
+                // Fetch the markdown file
+                fetch(postPath)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.text();
+                    })
+                    .then(markdown => {
+                        // Convert markdown to HTML and insert it into the div
+                        contentDiv.innerHTML = marked.parse(markdown);
+                    })
+                    .catch(error => {
+                        console.error('Error fetching or parsing markdown:', error);
+                        contentDiv.innerHTML = `<p class="text-center text-red-400">Could not load the blog post. Please check the file path and try again.</p>`;
+                    });
+            }
+        });
+    </script>
+</body>
+</html>
