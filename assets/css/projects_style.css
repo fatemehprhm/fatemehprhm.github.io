@@ -1,0 +1,20 @@
+.projects-masonry {
+    column-count: 1;
+    column-gap: 1.5rem; /* 24px */
+}
+@media (min-width: 768px) {
+    .projects-masonry {
+        column-count: 2;
+    }
+}
+@media (min-width: 1024px) {
+    .projects-masonry {
+        column-count: 3;
+    }
+}
+.project-card {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 1.5rem; /* 24px */
+    break-inside: avoid;
+}

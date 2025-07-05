@@ -1,0 +1,10 @@
+articles:
+  - id: sensor-fusion
+    date: July 04, 2025
+    title: The Challenges of Sensor Fusion in Urban Environments
+    description: A deep dive into the complexities of fusing LiDAR, camera, and IMU data for robust navigation in dense cityscapes...
+  
+  - id: ros-migration
+    date: June 15, 2025
+    title: "Migrating from ROS1 to ROS2: A Practical Guide"
+    description: Lessons learned from migrating a complex robotics project from ROS1 Noetic to ROS2 Humble, including performance gains and new features...

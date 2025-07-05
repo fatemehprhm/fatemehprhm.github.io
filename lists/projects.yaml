@@ -1,0 +1,42 @@
+projects:
+  - id: poultry-robot-navigation
+    image: ../images/poultry1.png
+    title: Poultry Robot Navigation
+    description: Autonomous robot for poultry farm monitoring using ROS2, Nav2, and Visual SLAM.
+    tags: [ROS2, SLAM, Nav2, Python, C++]
+
+  - id: voice-controlled-uav
+    image: ../images/uav1.png
+    title: Voice Controlled UAV
+    description: Voice-controlled UAV for object tracking using OpenAI Whisper and object detection.
+    tags: [Python, OpenAI Whisper, Object Detection]
+
+  - id: 3d-printer
+    image: ../images/printer2.jpeg
+    title: Custom 3D Printer Development
+    description: Built a 3D printer from scratch with custom Marlin firmware, optimized for high-quality, low-waste prints using Cura.
+    tags: [Marlin, 3D Printing, Hardware, Cura]
+
+  - id: lesion-detection
+    image: ../images/ai1.png
+    title: Lesion Detection in Ocular Imagery using Deep Learning
+    description: Built a deep learning model for ocular lesion detection using EfficientNet and U-Net with advanced image augmentation.
+    tags: [Deep Learning, PyTorch, U-Net, Computer Vision]
+
+  - id: scenario-design
+    image: ../images/esmini.png
+    title: Scenario Design for Autonomous Vehicle Testing
+    description: Built realistic OpenSCENARIO test environments for AV monitoring validation in CARLA and ESMINI, with automated data processing.
+    tags: [CARLA, OpenSCENARIO, AV Simulation]
+
+  - id: noise-reduction
+    image: ../images/processor2.jpg
+    title: Noise Reduction for Autonomous Vehicles
+    description: Enhanced AV perception by implementing real-time noise reduction for sensor data using advanced filtering.
+    tags: [Signal Processing, Kalman Filter, C++]
+
+  - id: gui-api
+    image: ../images/pyqt1.png
+    title: Custom API and GUI Development
+    description: Built a responsive PyQt GUI and backend API for AV monitoring, later optimized by converting Python code to C++.
+    tags: [PyQt, API Development, GUI, C++ Optimization]

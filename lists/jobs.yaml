@@ -1,0 +1,24 @@
+jobs:
+  - id: argos
+    period: Oct 2022 - June 2025
+    title: Software Developer
+    company: Argos (Remote | Germany)
+    description: Led a team in developing autonomous vehicle monitoring systems. Designed complex OpenSCENARIO simulations, developed C++/Python APIs and GUIs, and implemented signal processing for sensor data.
+  
+  - id: sadid-informatics
+    period: Dec 2023 - Mar 2024
+    title: Robotics Engineer
+    company: Sadid Informatics
+    description: Engineered autonomous navigation for poultry farm robots using ROS/ROS2, SLAM, and sensor fusion with Kalman filters. Validated systems in Gazebo and real-world deployments.
+  
+  - id: ai-medic
+    period: Sep 2022 - Nov 2022
+    title: Artificial Intelligence Engineer
+    company: AI medic | Internship
+    description: Developed deep learning systems (EfficientNet, U-Net) for semantic segmentation of ocular lesions and built an OCR model for medical image analysis.
+  
+  - id: hamtech
+    period: August 2022 - September 2022
+    title: Computer Vision Engineer
+    company: Hamtech | Internship
+    description: Developed a Telegram bot with web scraping for local waste data collection and implemented YOLO-based waste classification with anomaly detection to enhance accuracy in a recycling project.

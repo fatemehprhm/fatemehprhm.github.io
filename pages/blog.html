@@ -1,46 +1,62 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | Fatemeh Pourhashem</title>
-    <link rel="icon" href="../images/pngegg.png" type="image/x-icon" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="../assets/js/config.js"></script>
+    <script src="../assets/js/head.js"></script>
+    <script> loadHeadContent('Blog') </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
 </head>
 <body class="overflow-x-hidden">
     <canvas id="hero-canvas"></canvas>
 
     <main>
-        <!-- Blog Page (List) -->
         <section id="blog" class="page-section active">
             <div class="container mx-auto px-6 py-20">
                 <h2 class="text-4xl font-bold text-white text-center mb-12">Blog & Articles</h2>
                 <div class="max-w-3xl mx-auto">
-                    <div class="bg-gray-800 p-6 rounded-lg mb-8">
-                        <p class="text-sm text-indigo-300">July 04, 2025</p>
-                        <h3 class="text-2xl font-semibold text-white mt-2">The Challenges of Sensor Fusion in Urban Environments</h3>
-                        <p class="mt-3 text-gray-400">A deep dive into the complexities of fusing LiDAR, camera, and IMU data for robust navigation in dense cityscapes...</p>
-                        <!-- UPDATED LINK: Points to the template with a query parameter -->
-                        <a href="blog-post.html?post=sensor-fusion" class="text-indigo-400 hover:text-indigo-300 mt-4 inline-block">Read More &rarr;</a>
-                    </div>
-                    <div class="bg-gray-800 p-6 rounded-lg mb-8">
-                        <p class="text-sm text-indigo-300">June 15, 2025</p>
-                        <h3 class="text-2xl font-semibold text-white mt-2">Migrating from ROS1 to ROS2: A Practical Guide</h3>
-                        <p class="mt-3 text-gray-400">Lessons learned from migrating a complex robotics project from ROS1 Noetic to ROS2 Humble, including performance gains and new features...</p>
-                        <!-- Add a new .md file for this post and link to it -->
-                        <a href="blog-post.html?post=ros-migration" class="text-indigo-400 hover:text-indigo-300 mt-4 inline-block">Read More &rarr;</a>
-                    </div>
+                    <div id="blog-container"></div>
                 </div>
             </div>
         </section>
+
+        <script>
+            async function loadArticles() {
+                try {
+                    // Fetch the YAML file
+                    const response = await fetch('../lists/articles.yaml');
+                    const yamlText = await response.text();
+                    
+                    // Parse YAML to JavaScript object
+                    const data = jsyaml.load(yamlText);
+                    const articles = data.articles;
+                    
+                    const blogContainer = document.getElementById('blog-container');
+                    
+                    // Loop through each article and create the HTML
+                    articles.forEach(article => {
+                        const articleHTML = `
+                            <div class="bg-gray-800 p-6 rounded-lg mb-8">
+                                <p class="text-sm text-indigo-300">${article.date}</p>
+                                <h3 class="text-2xl font-semibold text-white mt-2">${article.title}</h3>
+                                <p class="mt-3 text-gray-400">${article.description}</p>
+                                <a href="blog-post.html?post=${article.id}" class="text-indigo-400 hover:text-indigo-300 mt-4 inline-block">Read More &rarr;</a>
+                            </div>
+                        `;
+                        
+                        // Add the new article HTML to the container
+                        blogContainer.innerHTML += articleHTML;
+                    });
+                    
+                } catch (error) {
+                    console.error('Error loading articles:', error);
+                }
+            }
+            
+            // Load articles when the page loads
+            loadArticles();
+        </script>
     </main>
 
-    <script src="../assets/js/config.js"></script>
     <script src="../assets/js/components.js"></script>
     <script src="../assets/js/script.js"></script>
 </body>

@@ -1,40 +1,49 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fatemeh Pourhashem | Robotics Software Engineer</title>
-    <link rel="icon" href="images/pngegg.png" type="image/x-icon" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/head.js"></script>
+    <script> loadHeadContent('Home') </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
 </head>
 <body class="overflow-x-hidden">
     <canvas id="hero-canvas"></canvas>
     <main class="container mx-auto px-4 sm:px-6 md:px-12 py-20 space-y-24">
         <section id="home" class="flex items-center page-section active">
-            <div class="container mx-auto px-4 sm:px-6 py-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div class="text-center md:text-left">
-                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight break-words">Fatemeh Pourhashem</h1>
-                    <p class="text-xl md:text-2xl text-indigo-300 mt-4 font-light">Robotics Software Engineer</p>
-                    <p class="max-w-xl mx-auto md:mx-0 mt-6 text-gray-300">
-                        Expertise in autonomous navigation, control systems, computer vision, and AI, transforming ambitious technological visions into reality.
-                    </p>
-                    <div class="mt-8 flex flex-col sm:flex-row sm:justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-4">
-                        <a href="pages/projects.html" class="bg-indigo-600 text-white font-semibold px-8 py-3 rounded-full hover:bg-indigo-700 transition duration-300">Explore My Work</a>
-                        <a href="#contact" class="border-2 border-white text-white font-semibold px-8 py-3 rounded-full hover:bg-white hover:text-gray-900 transition duration-300">Contact Me</a>
-                    </div>
-                </div>
+            <div class="container mx-auto px-4 sm:px-6 py-12 grid grid-cols-1 gap-12 items-center text-center">
+                
+                <!-- Image on top -->
                 <div class="flex justify-center">
-                    <div class="w-80 h-80 rounded-full overflow-hidden border-4 border-indigo-500 shadow-2xl">
-                        <img src="images/fatemeh_pourhashem.jpeg" alt="A photo of Fatemeh Pourhashem" class="w-full h-full object-cover">
-                    </div>
+                <div class="w-80 h-80 rounded-full overflow-hidden border-4 border-indigo-500 shadow-2xl">
+                    <img src="images/fatemeh_pourhashem.jpeg" alt="A photo of Fatemeh Pourhashem" class="w-full h-full object-cover">
                 </div>
+                </div>
+
+                <!-- Text below, center aligned -->
+                <div>
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight break-words">
+                    Fatemeh Pourhashem
+                </h1>
+                <p class="text-xl md:text-2xl text-indigo-300 mt-4 font-light">
+                    Robotics Software Engineer
+                </p>
+                <p class="max-w-xl mx-auto mt-6 text-gray-300">
+                    Expertise in autonomous navigation, control systems, computer vision, and AI, transforming ambitious technological visions into reality.
+                </p>
+
+                <div class="mt-8 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="pages/projects.html" class="bg-indigo-600 text-white font-semibold px-8 py-3 rounded-full hover:bg-indigo-700 transition duration-300">
+                    Explore My Work
+                    </a>
+                    <a href="#contact" class="border-2 border-white text-white font-semibold px-8 py-3 rounded-full hover:bg-white hover:text-gray-900 transition duration-300">
+                    Contact Me
+                    </a>
+                </div>
+                </div>
+                
             </div>
         </section>
+
         
         <!-- About Me Section -->
         <section id="about" class="section">
@@ -56,44 +65,49 @@
             </div>
         </section>
 
-        <!-- Experience Section -->
         <section id="experience" class="section">
             <h2 class="text-3xl font-bold text-white text-center mb-12">Professional Experience</h2>
-            <div class="relative border-l-2 border-indigo-500 pl-10">
-                <!-- Argos -->
-                <div class="mb-12">
-                    <div class="absolute w-4 h-4 bg-indigo-500 rounded-full -left-2 mt-1.5"></div>
-                    <p class="text-sm text-indigo-300">Oct 2022 - June 2025</p>
-                    <h3 class="text-xl font-semibold text-white mt-1">Software Developer</h3>
-                    <p class="text-gray-400">Argos (Remote | Germany)</p>
-                    <p class="mt-2 text-justify">Led a team in developing autonomous vehicle monitoring systems. Designed complex OpenSCENARIO simulations, developed C++/Python APIs and GUIs, and implemented signal processing for sensor data.</p>
-                </div>
-                <!-- Sadid Informatics -->
-                <div class="mb-12">
-                    <div class="absolute w-4 h-4 bg-indigo-500 rounded-full -left-2 mt-1.5"></div>
-                    <p class="text-sm text-indigo-300">Dec 2023 - Mar 2024</p>
-                    <h3 class="text-xl font-semibold text-white mt-1">Robotics Engineer</h3>
-                    <p class="text-gray-400">Sadid Informatics</p>
-                    <p class="mt-2 text-justify">Engineered autonomous navigation for poultry farm robots using ROS/ROS2, SLAM, and sensor fusion with Kalman filters. Validated systems in Gazebo and real-world deployments.</p>
-                </div>
-                <!-- AI Medic -->
-                <div class="mb-12">
-                    <div class="absolute w-4 h-4 bg-indigo-500 rounded-full -left-2 mt-1.5"></div>
-                    <p class="text-sm text-indigo-300">Sep 2022 - Nov 2022</p>
-                    <h3 class="text-xl font-semibold text-white mt-1">Artificial Intelligence Engineer</h3>
-                    <p class="text-gray-400">AI medic | Internship</p>
-                    <p class="mt-2 text-justify">Developed deep learning systems (EfficientNet, U-Net) for semantic segmentation of ocular lesions and built an OCR model for medical image analysis.</p>
-                </div>
-                <!-- Hamtech -->
-                <div class="mb-12">
-                    <div class="absolute w-4 h-4 bg-indigo-500 rounded-full -left-2 mt-1.5"></div>
-                    <p class="text-sm text-indigo-300">August 2022 - September 2022</p>
-                    <h3 class="text-xl font-semibold text-white mt-1">Computer Vision Engineer</h3>
-                    <p class="text-gray-400">Hamtech | Internship</p>
-                    <p class="mt-2 text-justify">Developed a Telegram bot with web scraping for local waste data collection and implemented YOLO-based waste classification with anomaly detection to enhance accuracy in a recycling project.</p>
-                </div>
+            <div id="jobs-container" class="relative border-l-2 border-indigo-500 pl-10">
+                <!-- Jobs will be dynamically loaded here -->
             </div>
         </section>
+
+        <script>
+            async function loadJobs() {
+                try {
+                    // Fetch the YAML file
+                    const response = await fetch('../lists/jobs.yaml');
+                    const yamlText = await response.text();
+                    
+                    // Parse YAML to JavaScript object
+                    const data = jsyaml.load(yamlText);
+                    const jobs = data.jobs;
+                    
+                    const container = document.getElementById('jobs-container');
+
+                    // Loop through each job and create the HTML
+                    jobs.forEach(job => {
+                        const jobHTML = `
+                            <div class="mb-12">
+                                <div class="absolute w-4 h-4 bg-indigo-500 rounded-full -left-2 mt-1.5"></div>
+                                <p class="text-sm text-indigo-300">${job.period}</p>
+                                <h3 class="text-xl font-semibold text-white mt-1">${job.title}</h3>
+                                <p class="text-gray-400">${job.company}</p>
+                                <p class="mt-2 text-justify">${job.description}</p>
+                            </div>
+                        `;
+
+                        // Add the new job HTML to the container
+                        container.innerHTML += jobHTML;
+                    });
+                    
+                } catch (error) {
+                    console.error('Error loading jobs:', error);
+                }
+            }
+            
+            loadJobs();
+        </script>
 
         <!-- Education Section -->
         <section id="education" class="section">
@@ -137,9 +151,6 @@
                         <div>
                             <h3 class="text-xl font-semibold text-white mb-2">ROSCon 2024 Scholarship Recipient</h3>
                             <p class="text-gray-300 mb-2">Awarded the ROSCon 2024 scholarship and attended the "Demistifying Networking" workshop in Odense, Denmark</p>
-                            <div class="bg-indigo-500/20 rounded-full px-3 py-1 text-sm text-indigo-300 inline-block">
-                                International Recognition
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -151,9 +162,6 @@
                         <div>
                             <h3 class="text-xl font-semibold text-white mb-2">Academic Excellence</h3>
                             <p class="text-gray-300 mb-2">Ranked second among all co-entrants in the master's program</p>
-                            <div class="bg-purple-500/20 rounded-full px-3 py-1 text-sm text-purple-300 inline-block">
-                                Academic Achievement
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -165,9 +173,6 @@
                         <div>
                             <h3 class="text-xl font-semibold text-white mb-2">Mentor for Bachelor Project</h3>
                             <p class="text-gray-300 mb-2">Mentored a bachelor student through her project on quadcopter path planning, guiding the development of navigation algorithms and simulation in ROS2</p>
-                            <div class="bg-green-500/20 rounded-full px-3 py-1 text-sm text-green-300 inline-block">
-                                Academic Leadership
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -215,7 +220,6 @@
         </section>
     </main>
 
-    <script src="assets/js/config.js"></script>
     <script src="assets/js/components.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
