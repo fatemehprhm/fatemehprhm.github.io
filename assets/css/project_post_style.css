@@ -1,0 +1,243 @@
+/* Enhanced Markdown Styling */
+.prose {
+    max-width: 800px;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.8;
+}
+
+/* Headings */
+.prose h1 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, #ffffff 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.prose h2 {
+    color: #e2e8f0;
+    font-size: 1.875rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    border-bottom: 2px solid #4f46e5;
+    padding-bottom: 0.5rem;
+}
+
+.prose h3 {
+    color: #cbd5e1;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+/* Paragraphs */
+.prose p {
+    color: #d1d5db;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* Lists */
+.prose ul {
+    margin: 1.5rem 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.prose li {
+    color: #d1d5db;
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    padding-left: 2rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+/* Custom bullet points */
+.prose li::before {
+    content: '▶';
+    color: #6366f1;
+    font-size: 0.9rem;
+    position: absolute;
+    left: 0.5rem;
+    top: 0.1rem;
+}
+
+/* Links */
+.prose a {
+    color: #818cf8;
+    text-decoration: underline;
+    text-decoration-color: #4f46e5;
+    transition: all 0.3s ease;
+}
+
+.prose a:hover {
+    color: #a5b4fc;
+    text-decoration-color: #6366f1;
+}
+
+/* Code */
+.prose code {
+    color: #f472b6;
+    background-color: rgba(139, 92, 246, 0.1);
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+    font-size: 0.9rem;
+}
+
+/* Blockquotes */
+.prose blockquote {
+    border-left: 4px solid #6366f1;
+    color: #a5b4fc;
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    background-color: rgba(99, 102, 241, 0.05);
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+/* Images */
+.prose img {
+    margin: 2rem auto;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.prose img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* Center all images by default */
+.prose p img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Image spacing */
+.prose p:has(img) {
+    margin-bottom: 2rem;
+}
+
+.prose p:has(img) + p {
+    margin-top: 2rem;
+}
+
+/* Multiple images in sequence */
+.prose p:has(img) + p:has(img) {
+    margin-top: 1rem;
+}
+
+/* Tables */
+.prose table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.prose th,
+.prose td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: #d1d5db;
+}
+
+.prose th {
+    background-color: rgba(99, 102, 241, 0.2);
+    font-weight: 600;
+    color: #e2e8f0;
+}
+
+/* Horizontal rules */
+.prose hr {
+    border: none;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #6366f1, transparent);
+    margin: 2rem 0;
+}
+
+/* Pre-formatted text */
+.prose pre {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+}
+
+.prose pre code {
+    background: none;
+    padding: 0;
+    color: #f8fafc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .prose {
+        font-size: 1rem;
+    }
+    
+    .prose h1 {
+        font-size: 2rem;
+    }
+    
+    .prose h2 {
+        font-size: 1.5rem;
+    }
+    
+    .prose h3 {
+        font-size: 1.25rem;
+    }
+    
+    .prose p,
+    .prose li {
+        font-size: 1rem;
+    }
+    
+    .prose li {
+        padding-left: 1.5rem;
+    }
+    
+    .prose li::before {
+        left: 0.25rem;
+    }
+}
+
+/* Back button enhancement */
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #818cf8;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: rgba(129, 140, 248, 0.1);
+}
+
+.back-button:hover {
+    color: #a5b4fc;
+    background-color: rgba(129, 140, 248, 0.2);
+    transform: translateX(-2px);
+}

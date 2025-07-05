@@ -9,28 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <!-- Add the Marked.js library to render Markdown -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <link rel="stylesheet" href="../assets/css/style.css">
-    <!-- Add styles for the rendered markdown -->
-    <style>
-        .prose h1, .prose h2, .prose h3 {
-            color: white;
-        }
-        .prose p, .prose li {
-            color: #d1d5db;
-        }
-        .prose a {
-            color: #818cf8;
-        }
-        .prose code {
-            color: #f472b6;
-        }
-        .prose blockquote {
-            border-left-color: #6366f1;
-            color: #a5b4fc;
-        }
-    </style>
+    <link rel="stylesheet" href="../assets/css/project_post_style.css">
+
 </head>
 <body class="overflow-x-hidden">
     <canvas id="hero-canvas"></canvas>
@@ -38,7 +20,10 @@
     <main>
         <section class="page-section active">
             <div class="container mx-auto px-6 py-20">
-                <a href="projects.html" class="text-indigo-400 hover:text-indigo-300">&larr; Back to Projects</a>
+                <a href="projects.html" class="back-button">
+                    <span>&larr;</span>
+                    <span>Back to Projects</span>
+                </a>
                 <!-- The Markdown content will be loaded here -->
                 <div id="content" class="prose prose-lg mx-auto mt-8"></div>
             </div>
@@ -70,6 +55,19 @@
                     .then(markdown => {
                         // Convert markdown to HTML and insert it into the div
                         contentDiv.innerHTML = marked.parse(markdown);
+                        
+                        // No need for manual text-align anymore, it's handled by CSS
+                        // Add lazy loading to images
+                        const images = contentDiv.querySelectorAll('img');
+                        images.forEach(img => {
+                            img.loading = 'lazy';
+                            img.style.cursor = 'pointer';
+                            
+                            // Add click to zoom functionality
+                            img.addEventListener('click', () => {
+                                window.open(img.src, '_blank');
+                            });
+                        });
                     })
                     .catch(error => {
                         console.error('Error fetching or parsing markdown:', error);
