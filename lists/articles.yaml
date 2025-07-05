@@ -1,10 +1,15 @@
 articles:
+  - id: networking-book
+    date: July 5, 2025
+    title: "Networking Finally Clicked for Me (Thanks to ROSCon and Kurose & Ross)"
+    description: A robotics engineer's perspective on how the ROSCon 2024 workshop and the book *Computer Networking A Top-Down Approach* made networking finally make sense — and why every roboticist should understand the pipes their data flows through.
+  
   - id: sensor-fusion
-    date: July 04, 2025
+    date: October 04, 2024
     title: The Challenges of Sensor Fusion in Urban Environments
-    description: A deep dive into the complexities of fusing LiDAR, camera, and IMU data for robust navigation in dense cityscapes...
+    description: A dive into the complexities of fusing LiDAR, camera, and IMU data for robust navigation in dense cityscapes...
   
   - id: ros-migration
-    date: June 15, 2025
+    date: March 15, 2024
     title: "Migrating from ROS1 to ROS2: A Practical Guide"
     description: Lessons learned from migrating a complex robotics project from ROS1 Noetic to ROS2 Humble, including performance gains and new features...

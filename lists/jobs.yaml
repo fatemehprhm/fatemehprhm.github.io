@@ -15,10 +15,10 @@ jobs:
     period: Sep 2022 - Nov 2022
     title: Artificial Intelligence Engineer
     company: AI medic | Internship
-    description: Developed deep learning systems (EfficientNet, U-Net) for semantic segmentation of ocular lesions and built an OCR model for medical image analysis.
+    description: Developed deep learning systems (EfficientNet, U-Net) for semantic segmentation of ocular lesions.
   
   - id: hamtech
     period: August 2022 - September 2022
     title: Computer Vision Engineer
     company: Hamtech | Internship
-    description: Developed a Telegram bot with web scraping for local waste data collection and implemented YOLO-based waste classification with anomaly detection to enhance accuracy in a recycling project.
+    description: Developed a web scraping system for local waste data collection and implemented YOLO-based waste classification with anomaly detection to enhance accuracy in a recycling project.

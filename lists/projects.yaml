@@ -3,7 +3,7 @@ projects:
     image: ../images/poultry1.png
     title: Poultry Robot Navigation
     description: Autonomous robot for poultry farm monitoring using ROS2, Nav2, and Visual SLAM.
-    tags: [ROS2, SLAM, Nav2, Python, C++]
+    tags: [ROS2, SLAM, Nav2, Python]
 
   - id: voice-controlled-uav
     image: ../images/uav1.png
@@ -27,13 +27,13 @@ projects:
     image: ../images/esmini.png
     title: Scenario Design for Autonomous Vehicle Testing
     description: Built realistic OpenSCENARIO test environments for AV monitoring validation in CARLA and ESMINI, with automated data processing.
-    tags: [CARLA, OpenSCENARIO, AV Simulation]
+    tags: [ESMINI, OpenSCENARIO, AV Simulation]
 
   - id: noise-reduction
     image: ../images/processor2.jpg
     title: Noise Reduction for Autonomous Vehicles
     description: Enhanced AV perception by implementing real-time noise reduction for sensor data using advanced filtering.
-    tags: [Signal Processing, Kalman Filter, C++]
+    tags: [Signal Processing, C++]
 
   - id: gui-api
     image: ../images/pyqt1.png
