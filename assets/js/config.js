@@ -37,7 +37,7 @@ const config = {
     navLinks: [
         { href: '/index.html', text: 'Home' },
         { href: '/pages/projects.html', text: 'Projects' },
-        { href: '/pages/art.html', text: 'Fine Arts' },
+        { href: '/pages/art.html', text: 'Art Gallery' },
         { href: '/pages/blog.html', text: 'Blog' }
     ]
 };
