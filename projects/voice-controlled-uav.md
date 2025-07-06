@@ -1,6 +1,6 @@
 # UAV Control and Navigation with Speech Recognition
 
-This project focused on the development of a voice-controlled unmanned aerial vehicle (UAV) for object tracking within a simulated environment. I utilized my expertise in robotics, machine learning, and programming to build a system that integrates speech recognition and object detection for autonomous navigation.
+My master project focused on the development of a voice-controlled unmanned aerial vehicle (UAV) for object tracking within a simulated environment. I utilized my expertise in robotics, machine learning, and programming to build a system that integrates speech recognition and object detection for autonomous navigation.
 
 ## Key Features
 

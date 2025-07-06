@@ -7,9 +7,9 @@ projects:
 
   - id: voice-controlled-uav
     image: ../images/uav1.png
-    title: Voice Controlled UAV
+    title: UAV Control and Navigation with Speech Recognition
     description: Voice-controlled UAV for object tracking using OpenAI Whisper and object detection.
-    tags: [Python, OpenAI Whisper, Object Detection]
+    tags: [Python, OpenAI Whisper, Object Detection, ROS2, RNN, Sahi]
 
   - id: 3d-printer
     image: ../images/printer2.jpeg

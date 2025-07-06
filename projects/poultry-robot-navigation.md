@@ -27,5 +27,3 @@ The following images showcase the different aspects of the project implementatio
 ## Technical Challenges
 
 During the development process, we encountered several technical challenges that required innovative solutions. The integration of multiple sensor systems demanded careful calibration and synchronization to ensure accurate data fusion.
-
-The project successfully demonstrated autonomous navigation capabilities in a complex agricultural environment, paving the way for future applications in precision farming.

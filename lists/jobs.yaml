@@ -1,6 +1,6 @@
 jobs:
   - id: argos
-    period: Oct 2022 - June 2025
+    period: Oct 2022 - Present
     title: Software Developer
     company: Argos (Remote | Germany)
     description: Led a team in developing autonomous vehicle monitoring systems. Designed complex OpenSCENARIO simulations, developed C++/Python APIs and GUIs, and implemented signal processing for sensor data.

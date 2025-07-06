@@ -1,4 +1,4 @@
-# Scenario Design and Data Processing for Autonomous Vehicle Testing
+# Scenario Design for Autonomous Vehicle Testing
 
 As a Software Developer at Argos, I designed and implemented simulation scenarios to validate monitoring algorithms for autonomous vehicles. Using OpenSCENARIO, I modeled complex driving conditions and executed them in simulators like CARLA and ESMINI. To improve realism, I developed custom road maps with RoadRunner and linked them to scenario scripts. A YAML-based interface streamlined configuration and collaboration, while custom Python tools handled automated data extraction and performance validation.
 
@@ -12,7 +12,7 @@ As a Software Developer at Argos, I designed and implemented simulation scenario
 
 ## Implementation Result
 
-The following image highlights a custom scenario setup and its execution environment:
+The following image highlights a custom scenario setup and its execution environment at Esmini:
 
 ![AV Testing Scenario](../images/esmini.png)
 

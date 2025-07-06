@@ -1,6 +1,6 @@
 # Lesion Detection in Ocular Imagery using Deep Learning
 
-In this project, I addressed the challenge of lesion detection in ocular images by applying advanced deep learning methods. The goal was to create a system capable of accurately identifying lesions through image classification and segmentation. I utilized popular deep learning frameworks such as TensorFlow and Keras to implement and train the models.
+In this project at Aimedic, I addressed the challenge of lesion detection in ocular images by applying advanced deep learning methods. The goal was to create a system capable of accurately identifying lesions through image classification and segmentation. I utilized popular deep learning frameworks such as TensorFlow and Keras to implement and train the models.
 
 ## Key Features
 
@@ -12,9 +12,7 @@ In this project, I addressed the challenge of lesion detection in ocular images 
 
 ## Implementation Results
 
-The following images illustrate the lesion classification and segmentation outcomes:
-
-![Lesion Classification with EfficientNet](../images/ai3.png)
+The following image illustrate the lesion classification and segmentation outcome:
 
 ![Lesion Segmentation with U-Net](../images/ai1.png)
 

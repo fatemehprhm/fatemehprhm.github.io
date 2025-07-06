@@ -1,6 +1,6 @@
 # Noise Reduction for Autonomous Vehicles
 
-At Argos, I led a project to improve the reliability of sensor data used by autonomous vehicles. The goal was to reduce noise in critical signals such as position, acceleration, and velocity to ensure more accurate mapping, object detection, and vehicle monitoring. Through advanced signal processing and real-time filtering techniques, the system became more robust to environmental interference, leading to improved algorithmic performance in simulation environments like ESMINI.
+At Argos, I led a project to improve the reliability of sensor data used by autonomous vehicles. The goal was to reduce noise in critical signals such as position, acceleration, and velocity to ensure more accurate mapping, object detection, and vehicle monitoring. Through advanced signal processing and real-time filtering techniques, the system became more robust to environmental interference.
 
 ## Key Features
 
