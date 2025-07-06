@@ -5,6 +5,12 @@ projects:
     description: Autonomous robot for poultry farm monitoring using ROS2, Nav2, and Visual SLAM.
     tags: [ROS2, SLAM, Nav2, Python]
 
+  - id: drone-show
+    image: ../images/show1.jpg
+    title: 3D Drone Show With Optimal Control
+    description: Developed a 3D drone swarm coordination system with optimal path planning algorithms for collision-free multi-UAV management in drone show.
+    tags: [MATLAB, Optimal Control, Swarm Robotics]
+
   - id: voice-controlled-uav
     image: ../images/uav1.png
     title: UAV Control and Navigation with Speech Recognition

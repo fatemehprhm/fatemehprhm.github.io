@@ -32,3 +32,6 @@ artworks:
   - id: "art11"
     image: "../images/artwork/art11.jpg"
     alt: "Artwork 11"
+  - id: "art12"
+    image: "../images/artwork/art12.jpg"
+    alt: "Artwork 12"
