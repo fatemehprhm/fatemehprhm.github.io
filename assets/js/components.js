@@ -17,6 +17,7 @@ function loadComponents() {
     headerContainer.innerHTML = `
     <nav class="bg-gray-900 bg-opacity-70 backdrop-blur-md sticky top-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="${config.paths.home}" class="text-white text-xl font-bold nav-link">Fatemeh Pourhashem</a>
             <div class="hidden md:flex space-x-8">
                 ${navLinksHtml}
             </div>
