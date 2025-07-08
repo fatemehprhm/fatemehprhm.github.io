@@ -42,7 +42,7 @@ It’s like putting on networking x-ray glasses.
 - **TCP congestion control** — why SSH gets laggy when your robot starts flooding the network with sensor data.
 - **UDP simplicity** — and why it fits better for real-time control loops when dropped packets are better than delayed ones.
 - **NAT and port numbers** — those weird bugs where your ROS2 nodes work on LAN but not across networks? It’s all in the NAT.
-- **Packet sniffing with Wireshark** — seeing real ROS2 traffic in Wireshark made it all click. (Shoutout to the ROSCon demo that showed exactly that.)
+- **Packet sniffing with Wireshark** — seeing real ROS2 traffic in Wireshark made it all click.
 
 ## Should You Read This Book?
 
