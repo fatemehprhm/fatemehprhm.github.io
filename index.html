@@ -43,7 +43,6 @@
                 
             </div>
         </section>
-
         
         <!-- About Me Section -->
         <section id="about" class="section">
@@ -68,109 +67,6 @@
             </div>
         </section>
 
-        <script>
-            async function loadCurrentProjects() {
-                try {
-                    // Fetch the YAML file
-                    const response = await fetch('lists/current_projects.yaml');
-                    const yamlText = await response.text();
-                    
-                    // Parse YAML to JavaScript object
-                    const data = jsyaml.load(yamlText);
-                    const projects = data.projects;
-                    
-                    const container = document.getElementById('current-projects-container');
-                    
-                    // Status color mapping
-                    const statusColors = {
-                        'Active Development': { bg: 'green', text: 'green' },
-                        'Research Phase': { bg: 'yellow', text: 'yellow' },
-                        'Testing Phase': { bg: 'blue', text: 'blue' },
-                        'Planning Phase': { bg: 'purple', text: 'purple' },
-                        'On Hold': { bg: 'gray', text: 'gray' },
-                        'Completed': { bg: 'emerald', text: 'emerald' }
-                    };
-                    
-                    // Progress color mapping
-                    const progressColors = {
-                        'Active Development': 'from-indigo-500 to-purple-500',
-                        'Research Phase': 'from-yellow-500 to-orange-500',
-                        'Testing Phase': 'from-blue-500 to-cyan-500',
-                        'Planning Phase': 'from-purple-500 to-pink-500',
-                        'On Hold': 'from-gray-500 to-gray-600',
-                        'Completed': 'from-emerald-500 to-green-500'
-                    };
-
-                    // Loop through each project and create the HTML
-                    projects.forEach(project => {
-                        const statusColor = statusColors[project.status] || statusColors['Planning Phase'];
-                        const progressColor = progressColors[project.status] || progressColors['Planning Phase'];
-                        
-                        // Generate tech stack tags
-                        const techStackHTML = project.tech_stack.map(tech => 
-                            `<span class="px-2 py-1 bg-${tech.color}-600/20 text-${tech.color}-300 rounded-full text-xs">${tech.name}</span>`
-                        ).join('');
-                        
-                        // Generate action buttons (only if buttons exist and array is not empty)
-                        let buttonsHTML = '';
-                        if (project.buttons && project.buttons.length > 0) {
-                            buttonsHTML = project.buttons.map((button, index) => {
-                                if (index === 0) {
-                                    return `<a href="${button.link}" class="flex-1 bg-${statusColor.bg}-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-${statusColor.bg}-700 transition duration-300 text-center">${button.text}</a>`;
-                                } else {
-                                    return `<a href="${button.link}" class="px-4 py-2 border border-gray-600 text-gray-300 text-sm rounded-lg hover:border-gray-500 transition duration-300">${button.text}</a>`;
-                                }
-                            }).join('');
-                        }
-
-                        const projectHTML = `
-                            <div class="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-xl border border-${statusColor.bg}-500/30 hover:border-${statusColor.bg}-500/60 transition-all duration-300 transform hover:scale-105">
-                                <div class="flex items-start justify-between mb-4">
-                                    <div class="flex items-center gap-3">
-                                        <div class="w-3 h-3 bg-${statusColor.bg}-500 rounded-full animate-pulse"></div>
-                                        <span class="text-sm text-${statusColor.text}-400 font-medium">${project.status}</span>
-                                    </div>
-                                    <div class="text-xs text-gray-400">${project.started}</div>
-                                </div>
-                                
-                                <h3 class="text-xl font-semibold text-white mb-3">${project.title}</h3>
-                                <p class="text-gray-300 mb-4 text-sm">
-                                    ${project.description}
-                                </p>
-                                
-                                <!-- Progress Bar -->
-                                <div class="mb-4">
-                                    <div class="flex justify-between items-center mb-2">
-                                        <span class="text-xs text-gray-400">Progress</span>
-                                        <span class="text-xs text-${statusColor.text}-400">${project.progress}%</span>
-                                    </div>
-                                    <div class="w-full bg-gray-700 rounded-full h-2">
-                                        <div class="bg-gradient-to-r ${progressColor} h-2 rounded-full" style="width: ${project.progress}%"></div>
-                                    </div>
-                                </div>
-                                
-                                <!-- Tech Stack -->
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    ${techStackHTML}
-                                </div>
-                                
-                                <!-- Action Buttons (only if buttons exist) -->
-                                ${buttonsHTML ? `<div class="flex gap-2">${buttonsHTML}</div>` : ''}
-                            </div>
-                        `;
-
-                        // Add the new project HTML to the container
-                        container.innerHTML += projectHTML;
-                    });
-                    
-                } catch (error) {
-                    console.error('Error loading current projects:', error);
-                }
-            }
-            
-            loadCurrentProjects();
-        </script>
-
         <!-- Professional Experience Section -->
         <section id="experience" class="section">
             <h2 class="text-3xl font-bold text-white text-center mb-12">Professional Experience</h2>
@@ -178,43 +74,6 @@
                 <!-- Jobs will be dynamically loaded here -->
             </div>
         </section>
-
-        <script>
-            async function loadJobs() {
-                try {
-                    // Fetch the YAML file
-                    const response = await fetch('../lists/jobs.yaml');
-                    const yamlText = await response.text();
-                    
-                    // Parse YAML to JavaScript object
-                    const data = jsyaml.load(yamlText);
-                    const jobs = data.jobs;
-                    
-                    const container = document.getElementById('jobs-container');
-
-                    // Loop through each job and create the HTML
-                    jobs.forEach(job => {
-                        const jobHTML = `
-                            <div class="mb-12">
-                                <div class="absolute w-4 h-4 bg-indigo-500 rounded-full -left-2 mt-1.5"></div>
-                                <p class="text-sm text-indigo-300">${job.period}</p>
-                                <h3 class="text-xl font-semibold text-white mt-1">${job.title}</h3>
-                                <p class="text-gray-400">${job.company}</p>
-                                <p class="mt-2 text-justify">${job.description}</p>
-                            </div>
-                        `;
-
-                        // Add the new job HTML to the container
-                        container.innerHTML += jobHTML;
-                    });
-                    
-                } catch (error) {
-                    console.error('Error loading jobs:', error);
-                }
-            }
-            
-            loadJobs();
-        </script>
 
         <!-- Education Section -->
         <section id="education" class="section">
