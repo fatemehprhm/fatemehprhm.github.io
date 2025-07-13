@@ -1,0 +1,62 @@
+projects:
+  - title: "Taking More AI Courses"
+    description: "Enrolling in advanced AI courses to deepen understanding of machine learning algorithms and their applications in robotics."
+    status: "Learning Phase"
+    progress: 40
+    started: "Started: May 2025"
+    tech_stack:
+      - name: "Reinforcement Learning"
+        color: "indigo"
+      - name: "Computer Vision"
+        color: "purple"
+
+
+  - title: "Review On Path Planning Algorithms"
+    description: "Conducting a comprehensive review of various path planning algorithms for mobile robots, focusing on efficiency and adaptability in dynamic environments."
+    status: "Research Phase"
+    progress: 10
+    started: "Started: Jul 2025"
+    tech_stack:
+      - name: "Path Planning"
+        color: "red"
+
+
+  # - title: "Voice-Controlled Robotic Assistant"
+  #   description: "Building a personal robotic assistant with natural language processing capabilities for home automation and task execution."
+  #   status: "Testing Phase"
+  #   progress: 80
+  #   started: "Started: Nov 2024"
+  #   tech_stack:
+  #     - name: "ROS2"
+  #       color: "indigo"
+  #     - name: "Python"
+  #       color: "purple"
+  #     - name: "NLP"
+  #       color: "green"
+  #     - name: "Speech Recognition"
+  #       color: "red"
+  #   buttons:
+  #     - text: "View Demo"
+  #       link: "#"
+  #     - text: "GitHub"
+  #       link: "#"
+
+  # - title: "Open Source Contribution"
+  #   description: "Contributing to the ROS2 ecosystem by developing new packages for autonomous vehicle perception and planning algorithms."
+  #   status: "Planning Phase"
+  #   progress: 15
+  #   started: "Started: Jan 2025"
+  #   tech_stack:
+  #     - name: "ROS2"
+  #       color: "indigo"
+  #     - name: "C++"
+  #       color: "orange"
+  #     - name: "CMake"
+  #       color: "green"
+  #     - name: "Docker"
+  #       color: "blue"
+  #   buttons:
+  #     - text: "View Plans"
+  #       link: "#"
+  #     - text: "Contribute"
+  #       link: "#"
