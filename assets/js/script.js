@@ -86,7 +86,7 @@ try {
 async function loadJobs() {
     try {
         // Fetch the YAML file
-        const response = await fetch('lists/jobs.yaml');
+        const response = await fetch('../../lists/jobs.yaml');
         const yamlText = await response.text();
         
         // Parse YAML to JavaScript object
@@ -121,7 +121,7 @@ loadJobs();
 async function loadCurrentProjects() {
     try {
         // Fetch the YAML file
-        const response = await fetch('lists/current_projects.yaml');
+        const response = await fetch('../../lists/current_projects.yaml');
         const yamlText = await response.text();
         
         // Parse YAML to JavaScript object
@@ -223,7 +223,7 @@ loadCurrentProjects();
 async function loadProjects() {
     try {
         // Fetch the YAML file
-        const response = await fetch('../lists/projects.yaml');
+        const response = await fetch('../../lists/projects.yaml');
         const yamlText = await response.text();
         
         // Parse YAML to JavaScript object
@@ -273,7 +273,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (projectName) {
         const contentDiv = document.getElementById('content');
-        const postPath = `../projects/${projectName}.md`;
+        const postPath = `../../projects/${projectName}.md`;
 
         // Fetch the markdown file
         fetch(postPath)
