@@ -20,6 +20,52 @@
         </section>
     </main>
 
+    <script>
+        async function loadProjects() {
+            try {
+                // Fetch the YAML file
+                const response = await fetch('../lists/projects.yaml');
+                const yamlText = await response.text();
+                
+                // Parse YAML to JavaScript object
+                const data = jsyaml.load(yamlText);
+                const projects = data.projects;
+                
+                const container = document.getElementById('projects-container');
+
+                // Loop through each project and create the HTML
+                projects.forEach(project => {
+                    // Generate the HTML for the tags
+                    const tagsHTML = project.tags.map(tag =>
+                        `<span class="text-sm text-indigo-300 border border-indigo-300 px-2 py-1 rounded-full">${tag}</span>`
+                    ).join('');
+
+                    // Create the full HTML for the project card
+                    const projectCardHTML = `
+                        <a href="project-post.html?post=${project.id}" class="block bg-gray-800 rounded-lg overflow-hidden project-card">
+                            <img src="${project.image}" alt="${project.title}" class="w-full h-auto">
+                            <div class="p-6">
+                                <h3 class="text-xl font-semibold text-white">${project.title}</h3>
+                                <p class="mt-2 text-gray-400 text-sm">${project.description}</p>
+                                <div class="flex flex-wrap gap-2 mt-4">
+                                    ${tagsHTML}
+                                </div>
+                            </div>
+                        </a>
+                    `;
+
+                    // Add the new project card to the container
+                    container.innerHTML += projectCardHTML;
+                });
+                
+            } catch (error) {
+                console.error('Error loading projects:', error);
+            }
+        }
+        
+        // Load projects when the page loads
+        loadProjects();
+    </script>
     <script src="../assets/js/components.js"></script>
     <script src="../assets/js/script.js"></script>
 </body>

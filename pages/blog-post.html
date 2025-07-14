@@ -22,6 +22,36 @@
             </div>
         </section>
     </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get the post name from the URL query parameter
+            const params = new URLSearchParams(window.location.search);
+            const postName = params.get('post');
+
+            if (postName) {
+                const contentDiv = document.getElementById('content');
+                const postPath = `../posts/${postName}.md`;
+
+                // Fetch the markdown file
+                fetch(postPath)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.text();
+                    })
+                    .then(markdown => {
+                        // Convert markdown to HTML and insert it into the div
+                        contentDiv.innerHTML = marked.parse(markdown);
+                    })
+                    .catch(error => {
+                        console.error('Error fetching or parsing markdown:', error);
+                        contentDiv.innerHTML = `<p class="text-center text-red-400">Could not load the blog post. Please check the file path and try again.</p>`;
+                    });
+            }
+        });
+    </script>
     
     <script src="../assets/js/components.js"></script>
     <script src="../assets/js/script.js"></script>

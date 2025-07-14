@@ -20,6 +20,43 @@
         </section>
     </main>
 
+    <script>
+        async function loadArticles() {
+            try {
+                // Fetch the YAML file
+                const response = await fetch('../lists/articles.yaml');
+                const yamlText = await response.text();
+                
+                // Parse YAML to JavaScript object
+                const data = jsyaml.load(yamlText);
+                const articles = data.articles;
+                
+                const blogContainer = document.getElementById('blog-container');
+                
+                // Loop through each article and create the HTML
+                articles.forEach(article => {
+                    const articleHTML = `
+                        <div class="bg-gray-800 p-6 rounded-lg mb-8">
+                            <p class="text-sm text-indigo-300">${article.date}</p>
+                            <h3 class="text-2xl font-semibold text-white mt-2">${article.title}</h3>
+                            <p class="mt-3 text-gray-400">${article.description}</p>
+                            <a href="blog-post.html?post=${article.id}" class="text-indigo-400 hover:text-indigo-300 mt-4 inline-block">Read More &rarr;</a>
+                        </div>
+                    `;
+                    
+                    // Add the new article HTML to the container
+                    blogContainer.innerHTML += articleHTML;
+                });
+                
+            } catch (error) {
+                console.error('Error loading articles:', error);
+            }
+        }
+        
+        // Load articles when the page loads
+        loadArticles();
+    </script>
+
     <script src="../assets/js/components.js"></script>
     <script src="../assets/js/script.js"></script>
 </body>
