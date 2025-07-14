@@ -310,7 +310,7 @@ document.addEventListener('DOMContentLoaded', () => {
 async function loadArticles() {
     try {
         // Fetch the YAML file
-        const response = await fetch('../lists/articles.yaml');
+        const response = await fetch('../../lists/articles.yaml');
         const yamlText = await response.text();
         
         // Parse YAML to JavaScript object
