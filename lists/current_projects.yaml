@@ -2,7 +2,7 @@ projects:
   - title: "Taking More AI Courses"
     description: "Enrolling in advanced AI courses to deepen understanding of machine learning algorithms and their applications in robotics."
     status: "Learning Phase"
-    progress: 40
+    progress: 20
     started: "Started: May 2025"
     tech_stack:
       - name: "Reinforcement Learning"
@@ -11,13 +11,13 @@ projects:
         color: "purple"
 
 
-  - title: "Review On Path Planning Algorithms"
-    description: "Conducting a comprehensive review of various path planning algorithms for mobile robots, focusing on efficiency and adaptability in dynamic environments."
+  - title: "Working on an article about Plug-and-Play robotics"
+    description: "Conducting a comprehensive review of middleware architectures for robotics"
     status: "Research Phase"
-    progress: 10
+    progress: 5
     started: "Started: Jul 2025"
     tech_stack:
-      - name: "Path Planning"
+      - name: "Plug-and-Play"
         color: "red"
 
 
