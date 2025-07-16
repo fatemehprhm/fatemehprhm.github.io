@@ -309,3 +309,51 @@ function closeModal(element) {
 
 // Load artworks when page loads
 document.addEventListener('DOMContentLoaded', loadArtworks);
+
+// Add this function to your assets/js/script.js file
+
+function loadVolunteering() {
+    // Defines the color themes used in the YAML file
+    const themes = {
+        sky: 'from-sky-600/10 to-blue-600/10 border-sky-500/30 bg-sky-500',
+        rose: 'from-rose-600/10 to-pink-600/10 border-rose-500/30 bg-rose-500',
+        amber: 'from-amber-600/10 to-yellow-600/10 border-amber-500/30 bg-amber-500',
+        lime: 'from-lime-600/10 to-green-600/10 border-lime-500/30 bg-lime-500'
+    };
+
+    fetch('../lists/volunteering.yaml') // Make sure the path to your YAML file is correct
+        .then(response => response.text())
+        .then(yaml => {
+            const volunteeringItems = jsyaml.load(yaml);
+            const container = document.getElementById('volunteering-container');
+            
+            let html = '';
+            volunteeringItems.forEach(item => {
+                const themeClasses = themes[item.theme] || themes.sky; // Default to 'sky' if theme is not found
+                html += `
+                    <div class="bg-gradient-to-r ${themeClasses.split(' ')[0]} ${themeClasses.split(' ')[1]} p-6 rounded-xl border ${themeClasses.split(' ')[2]}">
+                        <div class="flex items-start gap-4">
+                            <div class="w-3 h-3 ${themeClasses.split(' ')[3]} rounded-full mt-2 flex-shrink-0"></div>
+                            <div>
+                                <h3 class="text-xl font-semibold text-white mb-2">${item.title}</h3>
+                                <p class="text-gray-300 mb-2">${item.description}</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            container.innerHTML = html;
+        })
+        .catch(error => {
+            console.error('Error fetching or parsing volunteering data:', error);
+            const container = document.getElementById('volunteering-container');
+            container.innerHTML = '<p class="text-center text-red-400">Could not load volunteering experience.</p>';
+        });
+}
+
+// Ensure the function is called after the DOM is fully loaded.
+// If you have a `DOMContentLoaded` event listener, add this call inside it.
+document.addEventListener('DOMContentLoaded', (event) => {
+    // other functions like loadJobs(), loadProjects()...
+    loadVolunteering(); 
+});
