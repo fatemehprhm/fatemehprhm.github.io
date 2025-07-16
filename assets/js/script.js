@@ -85,11 +85,9 @@ try {
 
 async function loadJobs() {
     try {
-        // Fetch the YAML file
         const response = await fetch('../../lists/jobs.yaml');
         const yamlText = await response.text();
         
-        // Parse YAML to JavaScript object
         const data = jsyaml.load(yamlText);
         const jobs = data.jobs;
         
@@ -120,11 +118,9 @@ loadJobs();
 
 async function loadCurrentProjects() {
     try {
-        // Fetch the YAML file
         const response = await fetch('../../lists/current_projects.yaml');
         const yamlText = await response.text();
         
-        // Parse YAML to JavaScript object
         const data = jsyaml.load(yamlText);
         const projects = data.projects;
         
@@ -137,7 +133,7 @@ async function loadCurrentProjects() {
             'Testing Phase': { bg: 'blue', text: 'blue' },
             'Planning Phase': { bg: 'purple', text: 'purple' },
             'On Hold': { bg: 'gray', text: 'gray' },
-            'Completed': { bg: 'emerald', text: 'emerald' }
+            'Preparation Phase': { bg: 'emerald', text: 'emerald' }
         };
         
         // Progress color mapping
@@ -147,7 +143,7 @@ async function loadCurrentProjects() {
             'Testing Phase': 'from-blue-500 to-cyan-500',
             'Planning Phase': 'from-purple-500 to-pink-500',
             'On Hold': 'from-gray-500 to-gray-600',
-            'Completed': 'from-emerald-500 to-green-500'
+            'Preparation Phase': 'from-emerald-500 to-green-500'
         };
 
         // Loop through each project and create the HTML
@@ -219,7 +215,6 @@ async function loadCurrentProjects() {
 
 loadCurrentProjects();
 
-// Function to load and parse YAML file
 async function loadArtworks() {
     try {
         const response = await fetch('../lists/artworks.yaml');
@@ -249,7 +244,6 @@ function renderArtworks(artworks) {
             </div>
         `;
         
-        // Add click event listener to the artwork element
         artworkElement.addEventListener('click', () => {
             openArtworkModal(artwork.id, artwork.image, artwork.alt);
         });
@@ -307,13 +301,9 @@ function closeModal(element) {
     }, 300);
 }
 
-// Load artworks when page loads
 document.addEventListener('DOMContentLoaded', loadArtworks);
 
-// Add this function to your assets/js/script.js file
-
 function loadVolunteering() {
-    // Defines the color themes used in the YAML file
     const themes = {
         sky: 'from-sky-600/10 to-blue-600/10 border-sky-500/30 bg-sky-500',
         rose: 'from-rose-600/10 to-pink-600/10 border-rose-500/30 bg-rose-500',
@@ -321,7 +311,7 @@ function loadVolunteering() {
         lime: 'from-lime-600/10 to-green-600/10 border-lime-500/30 bg-lime-500'
     };
 
-    fetch('../lists/volunteering.yaml') // Make sure the path to your YAML file is correct
+    fetch('../lists/volunteering.yaml')
         .then(response => response.text())
         .then(yaml => {
             const volunteeringItems = jsyaml.load(yaml);
@@ -329,7 +319,7 @@ function loadVolunteering() {
             
             let html = '';
             volunteeringItems.forEach(item => {
-                const themeClasses = themes[item.theme] || themes.sky; // Default to 'sky' if theme is not found
+                const themeClasses = themes[item.theme] || themes.sky;
                 html += `
                     <div class="bg-gradient-to-r ${themeClasses.split(' ')[0]} ${themeClasses.split(' ')[1]} p-6 rounded-xl border ${themeClasses.split(' ')[2]}">
                         <div class="flex items-start gap-4">
@@ -351,9 +341,6 @@ function loadVolunteering() {
         });
 }
 
-// Ensure the function is called after the DOM is fully loaded.
-// If you have a `DOMContentLoaded` event listener, add this call inside it.
 document.addEventListener('DOMContentLoaded', (event) => {
-    // other functions like loadJobs(), loadProjects()...
     loadVolunteering(); 
 });

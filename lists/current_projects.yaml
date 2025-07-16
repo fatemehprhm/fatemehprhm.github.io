@@ -1,6 +1,6 @@
 projects:
   - title: "Taking More AI Courses"
-    description: "Enrolling in advanced AI courses to deepen understanding of machine learning algorithms and their applications in robotics."
+    description: "Enrolling in advanced AI courses to deepen understanding of Reinforcement Learning algorithms and their applications in robotics."
     status: "Learning Phase"
     progress: 20
     started: "Started: May 2025"
@@ -11,41 +11,26 @@ projects:
         color: "purple"
 
 
-  - title: "Working on an article about Plug-and-Play robotics"
-    description: "Conducting a comprehensive review of middleware architectures for robotics"
+  - title: "Reading about Plug-and-Play robotics and Networking in robotics"
+    description: "Just fascinated about this topic and want to learn more about it."
     status: "Research Phase"
     progress: 5
     started: "Started: Jul 2025"
     tech_stack:
       - name: "Plug-and-Play"
         color: "red"
+      - name: "Networking"
+        color: "green"
 
+  - title: "ILETS Exam Preparation"
+    description: "Wanna get ready for august 2025 ILETS exam."
+    status: "Preparation Phase"
+    progress: 60
+    started: "Started: Jul 2025"
+    tech_stack:
+      - name: "English Language Proficiency"
+        color: "blue"
 
-  # - title: "Voice-Controlled Robotic Assistant"
-  #   description: "Building a personal robotic assistant with natural language processing capabilities for home automation and task execution."
-  #   status: "Testing Phase"
-  #   progress: 80
-  #   started: "Started: Nov 2024"
-  #   tech_stack:
-  #     - name: "ROS2"
-  #       color: "indigo"
-  #     - name: "Python"
-  #       color: "purple"
-  #     - name: "NLP"
-  #       color: "green"
-  #     - name: "Speech Recognition"
-  #       color: "red"
-  #   buttons:
-  #     - text: "View Demo"
-  #       link: "#"
-  #     - text: "GitHub"
-  #       link: "#"
-
-  # - title: "Open Source Contribution"
-  #   description: "Contributing to the ROS2 ecosystem by developing new packages for autonomous vehicle perception and planning algorithms."
-  #   status: "Planning Phase"
-  #   progress: 15
-  #   started: "Started: Jan 2025"
   #   tech_stack:
   #     - name: "ROS2"
   #       color: "indigo"
