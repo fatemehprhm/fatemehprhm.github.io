@@ -22,8 +22,8 @@ projects:
       - name: "Networking"
         color: "green"
 
-  - title: "ILETS Exam Preparation"
-    description: "Wanna get ready for august 2025 ILETS exam."
+  - title: "IELTS Exam Preparation"
+    description: "Wanna get ready for august 2025 IELTS exam."
     status: "Preparation Phase"
     progress: 60
     started: "Started: Jul 2025"
