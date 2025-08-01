@@ -7,8 +7,15 @@ projects:
     tech_stack:
       - name: "Reinforcement Learning"
         color: "indigo"
-      - name: "Computer Vision"
-        color: "purple"
+  
+  - title: "Taking MIT 6.006 Introduction to Algorithms on Youtube"
+    description: "Learning algorithms and data structures to enhance problem-solving skills in robotics applications."
+    status: "Learning Phase"
+    progress: 40
+    started: "Started: Jul 2025"
+    tech_stack:
+      - name: "Algorithms and Data Structures"
+        color: "indigo"
 
 
   - title: "Reading about Plug-and-Play robotics and Networking in robotics"
