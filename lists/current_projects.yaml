@@ -29,14 +29,14 @@ projects:
       - name: "Networking"
         color: "green"
 
-  - title: "IELTS Exam Preparation"
-    description: "Getting ready for august 2025 IELTS exam."
-    status: "Preparation Phase"
-    progress: 60
-    started: "Started: Jul 2025"
-    tech_stack:
-      - name: "English Language Proficiency"
-        color: "blue"
+  # - title: "IELTS Exam Preparation"
+  #   description: "Getting ready for august 2025 IELTS exam."
+  #   status: "Preparation Phase"
+  #   progress: 60
+  #   started: "Started: Jul 2025"
+  #   tech_stack:
+  #     - name: "English Language Proficiency"
+  #       color: "blue"
 
   #   tech_stack:
   #     - name: "ROS2"
