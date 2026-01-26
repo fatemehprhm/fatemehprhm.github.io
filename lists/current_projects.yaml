@@ -18,16 +18,16 @@ projects:
         color: "indigo"
 
 
-  - title: "Reading about Plug-and-Play robotics and Networking in robotics"
-    description: "Just fascinated about this topic and want to learn more about it."
-    status: "Research Phase"
-    progress: 5
-    started: "Started: Jul 2025"
-    tech_stack:
-      - name: "Plug-and-Play"
-        color: "red"
-      - name: "Networking"
-        color: "green"
+  # - title: "Reading about Plug-and-Play robotics and Networking in robotics"
+  #   description: "Just fascinated about this topic and want to learn more about it."
+  #   status: "Research Phase"
+  #   progress: 5
+  #   started: "Started: Jul 2025"
+  #   tech_stack:
+  #     - name: "Plug-and-Play"
+  #       color: "red"
+  #     - name: "Networking"
+  #       color: "green"
 
   # - title: "IELTS Exam Preparation"
   #   description: "Getting ready for august 2025 IELTS exam."
